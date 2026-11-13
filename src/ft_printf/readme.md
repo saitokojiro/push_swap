@@ -1,0 +1,7 @@
+- [X] ft_putchar.c 
+- [X] ft_putstr.c 
+- [X] ft_putptr.c 
+- [X] ft_putnbr.c 
+- [X] ft_putunsigned.c 
+- [X] ft_puthex.c 
+- [X] ft_printf.c 
