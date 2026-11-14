@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 11:48:21 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/01 22:43:20 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/09 14:28:58 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int	ft_putstr_fd(char *str, int fd);
 int	ft_putunsigned_fd(unsigned int n, int fd);
 int	ft_puthex_fd(unsigned long long n, char c, int fd);
 int	ft_putptr_fd(unsigned long long ptr, int fd);
-int	ft_format(t_tab *tab, const char *str);
+int	ft_format(t_tab *tab, const char *str, int fd);
 
 #endif
