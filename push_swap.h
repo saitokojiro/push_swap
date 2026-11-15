@@ -14,6 +14,9 @@ void	swap_a(t_pile **pile_a, int isshow);
 void	swap_b(t_pile **pile_b, int isshow);
 void	swap_ab(t_pile **pile_a, t_pile **pile_b, int isshow);
 
+void	push_a(t_pile **pile_a, t_pile **pile_b, int isshow);
+void	push_b(t_pile **pile_a, t_pile **pile_b, int isshow);
+
 void	rotate_a(t_list **pile_a, int isshow);
 void	rotate_b(t_list **pile_b, int isshow);
 void	rotate_ab(t_list **pile_a, t_list **pile_b, int isshow);
