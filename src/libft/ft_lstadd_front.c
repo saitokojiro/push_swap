@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 20:26:30 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/03 00:08:33 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/17 13:03:50 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst)
 	{
-		if (*lst)
-			new->next = *lst;
+		new->next = *lst;
 		*lst = new;
 	}
 }
