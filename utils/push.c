@@ -6,16 +6,16 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/15 13:24:00 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/15 13:30:36 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/17 11:40:38 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a(t_pile **pile_a, t_pile **pile_b, int isshow)
+void	push_a(t_list **pile_a, t_list **pile_b, int isshow)
 {
-	t_pile	*tmp;
-	
+	t_list	*tmp;
+
 	if (!pile_a || !pile_b || !*pile_b)
 		return ;
 	tmp = *pile_b;
@@ -25,10 +25,10 @@ void	push_a(t_pile **pile_a, t_pile **pile_b, int isshow)
 		ft_putstr_fd("pa\n", 1);
 }
 
-void	push_b(t_pile **pile_a, t_pile **pile_b, int isshow)
+void	push_b(t_list **pile_a, t_list **pile_b, int isshow)
 {
-	t_pile	*tmp;
-	
+	t_list	*tmp;
+
 	if (!pile_a || !pile_b || !*pile_a)
 		return ;
 	tmp = *pile_a;
