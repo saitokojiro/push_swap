@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 10:09:31 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/17 11:41:01 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 21:12:42 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	simple(t_list **pile_a, t_list **pile_b, int isshow)
 		push_b(pile_a, pile_b, isshow);
 	}
 	while (*pile_b)
-		push_a(pile_a, pile_b, 0);
+		push_a(pile_a, pile_b, isshow);
 }
 
 
@@ -48,33 +48,33 @@ void	print_stack(char *name, t_list *stack)
 	printf("\n");
 }
 
-int	main(void)
-{
-	t_list	*pile_a;
-	t_list	*pile_b;
-	int		numbers[] = {5, 2, 8, 1, 9, 3, 7, 4, 6};
-	int		i;
+// int	main(void)
+// {
+// 	t_list	*pile_a;
+// 	t_list	*pile_b;
+// 	int		numbers[] = {5, 2, 8, 1, 9, 3, 7, 4, 6};
+// 	int		i;
 
-	pile_a = NULL;
-	pile_b = NULL;
-	i = 0;
+// 	pile_a = NULL;
+// 	pile_b = NULL;
+// 	i = 0;
 
-	while (i < 9)
-	{
-		ft_lstadd_back(&pile_a, ft_lstnew(&numbers[i]));
-		i++;
-	}
+// 	while (i < 9)
+// 	{
+// 		ft_lstadd_back(&pile_a, ft_lstnew(&numbers[i]));
+// 		i++;
+// 	}
 
-	printf("Avant le tri :\n");
-	print_stack("Pile A", pile_a);
-	print_stack("Pile B", pile_b);
+// 	printf("Avant le tri :\n");
+// 	print_stack("Pile A", pile_a);
+// 	print_stack("Pile B", pile_b);
 
-	printf("\nExecution de simple()...\n\n");
-	simple(&pile_a, &pile_b, 1);
+// 	printf("\nExecution de simple()...\n\n");
+// 	simple(&pile_a, &pile_b, 1);
 
-	printf("\nApres le tri :\n");
-	print_stack("Pile A", pile_a);
-	print_stack("Pile B", pile_b);
+// 	printf("\nApres le tri :\n");
+// 	print_stack("Pile A", pile_a);
+// 	print_stack("Pile B", pile_b);
 
-	return (0);
-}
+// 	return (0);
+// }

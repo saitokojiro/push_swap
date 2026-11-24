@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 10:51:19 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/24 11:58:22 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 21:24:47 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,36 @@
 
 # include "./src/libft/libft.h"
 
-typedef struct s_pile
+typedef enum e_strat
 {
-	int				value;
-	struct s_pile	*next;
-}	t_pile;
+	STRAT_ADAPTIVE,
+	STRAT_SIMPLE,
+	STRAT_MEDIUM,
+	STRAT_COMPLEX,
+}	t_strat;
+
+typedef struct s_opts
+{
+	t_strat			strat;
+	int				strat_set;
+	int				bench;
+}	t_opts;
 
 int		min_index(t_list *pile);
-int		sqrt(int nb);
+int		ft_sqrt(int nb);
 int		ft_atoi_strict_custom(char *str, int *n);
+
+
+int		ft_getflag(int argc, char **argv, t_opts *opts);
+int		fill_stack(t_list **pil_a, int count, char **argv);
+int		is_sort(t_list *pile);
+
+void	ft_error(t_list **pile_a, t_list **pile_b);
+void	free_stack(t_list **pil_a, t_list **pil_b);
+
+void	simple(t_list **pile_a, t_list **pile_b, int isshow);
+
+void	sort_algo(t_list **pile_a, t_list **pile_b, t_opts *opts);
 
 void	swap_a(t_list **pile_a, int isshow);
 void	swap_b(t_list **pile_b, int isshow);

@@ -6,15 +6,20 @@
 #    By: joellin <joellin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/17 10:54:37 by joellin           #+#    #+#              #
-#    Updated: 2026/11/17 13:07:40 by joellin          ###   ########.fr        #
+#    Updated: 2026/11/24 21:35:05 by joellin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = utils/push.c \
+SRCS = main.c \
+	utils/push.c \
 	utils/reverse_rotate.c \
 	utils/rotate.c \
 	utils/swap.c \
 	utils/utils.c \
+	utils/stack.c \
+	utils/sort_algo.c \
+	utils/parsing.c \
+	algo/simple.c \
 
 LIBFT = src/libft/libft.a
 
@@ -28,10 +33,7 @@ RM = rm -f
 
 CFLAGS = -Wall -Werror -Wextra -I .
 
-NAME = push_swap.a
-
-test: $(NAME) $(LIBFT)
-	$(CC) $(CFLAGS) ./algo/simple.c ./push_swap.a ./src/libft/libft.a && ./a.out
+NAME = push_swap
 
 all: $(NAME)
 
@@ -41,8 +43,16 @@ $(LIBFT):
 #$(PRINTF):
 #		$(MAKE) -C libftprintf
 
+
+
+# $(NAME): $(OBJS) $(LIBFT)
+# 		ar rcs $(NAME) $(OBJS)
+
 $(NAME): $(OBJS) $(LIBFT)
-		ar rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT)  -o $(NAME)
+
+%.o: %.c push_swap.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean : 
 		$(RM) $(OBJS)
