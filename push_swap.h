@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 10:51:19 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/17 11:21:36 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 11:58:22 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ typedef struct s_pile
 }	t_pile;
 
 int		min_index(t_list *pile);
+int		sqrt(int nb);
+int		ft_atoi_strict_custom(char *str, int *n);
 
 void	swap_a(t_list **pile_a, int isshow);
 void	swap_b(t_list **pile_b, int isshow);
