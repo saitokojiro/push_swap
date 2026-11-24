@@ -6,12 +6,11 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 20:11:07 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/24 21:17:11 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 21:47:31 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 void	free_stack(t_list **pil_a, t_list **pil_b)
 {
@@ -34,9 +33,9 @@ static int	is_duplicate(t_list *pile, int n)
 
 int	fill_stack(t_list **pil_a, int count, char **argv)
 {
-	int	i;
-	int val;
-	int	*nb;
+	int		i;
+	int		val;
+	int		*nb;
 	t_list	*tim;
 
 	i = 0;
@@ -45,7 +44,7 @@ int	fill_stack(t_list **pil_a, int count, char **argv)
 		if (!ft_atoi_strict_custom(argv[i], &val) || is_duplicate(*pil_a, val))
 			return (0);
 		nb = malloc(sizeof(int));
-		if(!nb)
+		if (!nb)
 			return (0);
 		*nb = val;
 		tim = ft_lstnew(nb);
@@ -56,7 +55,8 @@ int	fill_stack(t_list **pil_a, int count, char **argv)
 	}
 	return (1);
 }
-int is_sort(t_list *pile)
+
+int	is_sort(t_list *pile)
 {
 	while (pile && pile->next)
 	{

@@ -6,13 +6,13 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 11:57:15 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/24 21:20:47 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 21:46:06 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int ft_is_flag(char *arg, char *flag)
+static int	ft_is_flag(char *arg, char *flag)
 {
 	return (ft_strncmp(arg, flag, ft_strlen(flag) + 1) == 0);
 }
@@ -42,7 +42,6 @@ static int	ft_parse_flag(t_opts *opts, char *arv)
 		return (0);
 	}
 	return (-1);
-	
 }
 
 int	ft_getflag(int argc, char **argv, t_opts *opts)

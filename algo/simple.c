@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 10:09:31 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/24 21:12:42 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 21:49:47 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	simple(t_list **pile_a, t_list **pile_b, int isshow)
 	while (*pile_b)
 		push_a(pile_a, pile_b, isshow);
 }
-
 
 void	print_stack(char *name, t_list *stack)
 {

@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 10:51:19 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/24 21:24:47 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/24 21:49:40 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ typedef struct s_opts
 int		min_index(t_list *pile);
 int		ft_sqrt(int nb);
 int		ft_atoi_strict_custom(char *str, int *n);
-
 
 int		ft_getflag(int argc, char **argv, t_opts *opts);
 int		fill_stack(t_list **pil_a, int count, char **argv);
