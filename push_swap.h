@@ -6,7 +6,7 @@
 /*   By: joellin <joellin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/17 10:51:19 by joellin           #+#    #+#             */
-/*   Updated: 2026/11/24 21:49:40 by joellin          ###   ########.fr       */
+/*   Updated: 2026/11/25 09:12:05 by joellin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int		ft_atoi_strict_custom(char *str, int *n);
 int		ft_getflag(int argc, char **argv, t_opts *opts);
 int		fill_stack(t_list **pil_a, int count, char **argv);
 int		is_sort(t_list *pile);
+
+double	avg_unsort(t_list *pil_a);
 
 void	ft_error(t_list **pile_a, t_list **pile_b);
 void	free_stack(t_list **pil_a, t_list **pil_b);
